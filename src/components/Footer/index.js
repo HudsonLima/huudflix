@@ -3,16 +3,14 @@ import { FooterBase } from './styles';
 
 function Footer() {
   return (
-    <FooterBase>
-      <a href="https://www.alura.com.br/" target="blank">     
-      </a>
+    <FooterBase>      
       <p>
-      <a href="https://www.linkedin.com/in/hudsonlimati/"  target="blank">
-        Hudson Lima 
-        </a> fez esse projeto orgulhosamente  durante a
-        {' '}
-        <a href="https://www.alura.com.br/"  target="blank">
-          Imersão React da Alura
+        <a href="https://www.linkedin.com/in/hudsonlimati/"  target="blank">
+          Hudson Lima 
+          </a> proudly created this react-app project during
+          {' '}
+          <a href="https://www.alura.com.br/"  target="blank">
+          Alura's React Immersion
         </a>
       </p>
     </FooterBase>
