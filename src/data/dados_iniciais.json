@@ -1,0 +1,56 @@
+{
+  "categorias": [ 
+    {
+      "titulo": "Musicas",
+      "cor": "#6b5be2",
+      "link_extra": {
+        "text": "",
+        "url": ""
+      },
+      "videos": [
+        {
+          "titulo": "If you hand me a guitar, I'll play the blues. That's the place I automatically go.",
+          "url": "https://www.youtube.com/watch?v=pKwQlm-wldA"
+        },
+        {
+          "titulo": "Dire Straits - So Far Away",
+          "url": "https://www.youtube.com/watch?v=YIHMPc6ZCuI"
+        },
+        {
+          "titulo": "Duran Duran - A Matter Of Feeling",
+          "url": "https://www.youtube.com/watch?v=MjJfqQucQ0I"
+        },
+        {
+          "titulo": "R.E.M. - Losing My Religion",
+          "url": "https://www.youtube.com/watch?v=xwtdhWltSIg"
+        },
+        {
+          "titulo": "The Commodores - Easy",
+          "url": "https://www.youtube.com/watch?v=3DSVMDmzCcA"
+        }
+      ]
+    },
+    {
+      "titulo": "Filmes",
+      "cor": "orange",
+      "videos": [
+        {
+          "titulo": "Interestellar",
+          "url": "https://www.youtube.com/watch?v=frD_IiY_A3E"
+        },
+        {
+          "titulo": "Constantine",
+          "url": "https://www.youtube.com/watch?v=DEa508Xmmio"
+        },
+        {
+          "titulo": "No Limite do Amanhã ",
+          "url": "https://www.youtube.com/watch?v=EA6EWWwDbtY"
+        },
+        {
+          "titulo": "Feitiço do Tempo",
+          "url": "https://www.youtube.com/watch?v=zi8d69P9NvI"
+        }        
+      ]
+    }    
+  ]
+}
