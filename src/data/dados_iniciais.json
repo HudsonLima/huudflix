@@ -1,7 +1,7 @@
 {
   "categorias": [ 
     {
-      "titulo": "Musicas",
+      "titulo": "Musics",
       "cor": "#6b5be2",
       "link_extra": {
         "text": "",
@@ -27,11 +27,15 @@
         {
           "titulo": "The Commodores - Easy",
           "url": "https://www.youtube.com/watch?v=3DSVMDmzCcA"
+        },
+        {
+          "titulo": "John Mayer - Stop This Train",
+          "url": "https://www.youtube.com/watch?v=mS2o4q7vRFM"
         }
       ]
     },
     {
-      "titulo": "Filmes",
+      "titulo": "Movies",
       "cor": "orange",
       "videos": [
         {
@@ -47,9 +51,13 @@
           "url": "https://www.youtube.com/watch?v=EA6EWWwDbtY"
         },
         {
-          "titulo": "Feitiço do Tempo",
-          "url": "https://www.youtube.com/watch?v=zi8d69P9NvI"
-        }        
+          "titulo": "Yesterday",
+          "url": "https://www.youtube.com/watch?v=6uqvgPm8U4c"
+        },
+        {
+          "titulo": "Avengers: Infinity War",
+          "url": "https://www.youtube.com/watch?v=6ZfuNTqbHE8"
+        }       
       ]
     }    
   ]
