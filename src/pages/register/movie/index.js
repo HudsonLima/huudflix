@@ -1,17 +1,18 @@
 import React from 'react';
-import PageDefault from '../../../components/PageDefault';
 import { Link } from 'react-router-dom';
+import PageDefault from '../../../components/PageDefault';
 
 function AddMovie() {
-    return (    
+    return ( 
         <PageDefault>
-          <h1> Add new movie </h1>
+         <h1> Add new movie </h1> 
 
           <Link to="/register/category">
             Add new category
-          </Link>          
-        </PageDefault>     
-    )
+          </Link>       
+             
+        </PageDefault>   
+    );
 }
 
 export default AddMovie;
