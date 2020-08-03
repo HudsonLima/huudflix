@@ -1,4 +1,4 @@
-import React, { useState }  from 'react';
+import React, { useState, useEffect }  from 'react';
 import PageDefault from '../../../components/PageDefault';
 import { Link } from 'react-router-dom';
 import FormField from '../../../components/FormField';
@@ -12,7 +12,7 @@ function AddCategory() {
     color: '',
     };
   
-  const [categories, setCategorias] = useState([]);
+  const [categories, setCategories] = useState([]);
   const [values, setValues] = useState(initialValues);
 
   function setValue(key, value) {
@@ -31,13 +31,23 @@ function AddCategory() {
     );
   };
 
+  useEffect(() => {
+    console.log('called useEffect');
+    const URL = 'http://localhost:8080/categories';
+    fetch(URL)
+      .then(async (serverResponse) => {
+        const response = await serverResponse.json();
+        setCategories(response);
+      });
+    }, []);
+
     return (    
         <PageDefault>
           <h1> Add new category: {values.name}</h1>
             
             <form onSubmit={function handleSubmit(info) {
                 info.preventDefault();
-                setCategorias([
+                setCategories([
                   ...categories,
                   values
                 ]);
