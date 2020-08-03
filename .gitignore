@@ -26,4 +26,3 @@ yarn-error.log*
 .vs/huudflix/v16/.suo
 .vs/huudflix/config/applicationhost.config
 .vs/ProjectSettings.json
-package-lock.json
