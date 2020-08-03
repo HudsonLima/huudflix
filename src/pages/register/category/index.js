@@ -1,21 +1,88 @@
-import React from 'react';
+import React, { useState }  from 'react';
 import PageDefault from '../../../components/PageDefault';
 import { Link } from 'react-router-dom';
+import FormField from '../../../components/FormField';
+import Button from '../../../components/Button';
 
 function AddCategory() {
+
+  const initialValues = {
+    name: '',
+    description: '',
+    color: '',
+    };
+  
+  const [categories, setCategorias] = useState([]);
+  const [values, setValues] = useState(initialValues);
+
+  function setValue(key, value) {
+    setValues({
+      ...values,
+      [key]: value
+    })
+  };
+
+  function handleChange(parm) {
+    
+    // const { getAttribute, value } = parm.target;
+    setValue(
+      parm.target.getAttribute('name'),
+      parm.target.value
+    );
+  };
+
     return (    
         <PageDefault>
-          <h1> Add new category</h1>
-            <form>
-              <label>
-                Category name:
-                  <input type="text"></input>
-              </label>
+          <h1> Add new category: {values.name}</h1>
+            
+            <form onSubmit={function handleSubmit(info) {
+                info.preventDefault();
+                setCategorias([
+                  ...categories,
+                  values
+                ]);
 
-              <button>
-                Cadastrar
-              </button>
-            </form>          
+                setValues(initialValues);
+              }}>
+
+                <FormField 
+                  label="Category Name"
+                  type="text"
+                  name="name"                 
+                  value={values.name}
+                  onChange={handleChange}
+                />
+
+                <FormField 
+                  label="Description"
+                  type="textarea"
+                  name="description"                  
+                  value={values.description}
+                  onChange={handleChange}
+                />
+
+                <FormField 
+                  label="Color"
+                  type="color"
+                  name="color"                  
+                  value={values.color}
+                  onChange={handleChange}
+                />              
+
+              <Button>
+                Add
+              </Button>
+            </form> 
+
+            <ul>
+                {categories.map((category, indice) => {
+                  return (
+                    <li key={`${category}${indice}`}>
+                      {category.name}
+                    </li>
+                  )
+                })}
+            </ul>     
 
           <Link to="/">
             Back to home
