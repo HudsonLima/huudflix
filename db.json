@@ -1,0 +1,28 @@
+{
+    "categories": [
+        {
+            "id": 1,
+            "name": "Music",
+            "description": "Great music videos",
+            "color": "#6b5be2"
+        },
+        {
+            "id": 2,
+            "name": "Movies",
+            "description": "",
+            "color": "orange"
+        },
+        {
+            "id": 3,
+            "name": "Series",
+            "description": "",
+            "color": "red"
+        },
+        {
+            "id": 4,
+            "name": "Books",
+            "description": "",
+            "color": "blue"
+        }
+    ]
+}
