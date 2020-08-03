@@ -2,25 +2,25 @@
     "categories": [
         {
             "id": 1,
-            "name": "Music",
+            "title": "Music",
             "description": "Great music videos",
             "color": "#6b5be2"
         },
         {
             "id": 2,
-            "name": "Movies",
+            "title": "Movies",
             "description": "",
             "color": "orange"
         },
         {
             "id": 3,
-            "name": "Series",
+            "title": "Series",
             "description": "",
             "color": "red"
         },
         {
             "id": 4,
-            "name": "Books",
+            "title": "Books",
             "description": "",
             "color": "blue"
         }
