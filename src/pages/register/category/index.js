@@ -2,6 +2,7 @@ import React, { useState }  from 'react';
 import PageDefault from '../../../components/PageDefault';
 import { Link } from 'react-router-dom';
 import FormField from '../../../components/FormField';
+import Button from '../../../components/Button';
 
 function AddCategory() {
 
@@ -9,7 +10,7 @@ function AddCategory() {
     name: '',
     description: '',
     color: '',
-    }
+    };
   
   const [categories, setCategorias] = useState([]);
   const [values, setValues] = useState(initialValues);
@@ -19,7 +20,8 @@ function AddCategory() {
       ...values,
       [key]: value
     })
-  }
+  };
+
   function handleChange(parm) {
     
     // const { getAttribute, value } = parm.target;
@@ -27,7 +29,7 @@ function AddCategory() {
       parm.target.getAttribute('name'),
       parm.target.value
     );
-  }
+  };
 
     return (    
         <PageDefault>
@@ -53,7 +55,7 @@ function AddCategory() {
 
                 <FormField 
                   label="Description"
-                  type="text"
+                  type="textarea"
                   name="description"                  
                   value={values.description}
                   onChange={handleChange}
@@ -67,9 +69,9 @@ function AddCategory() {
                   onChange={handleChange}
                 />              
 
-              <button>
-                Cadastrar
-              </button>
+              <Button>
+                Add
+              </Button>
             </form> 
 
             <ul>
