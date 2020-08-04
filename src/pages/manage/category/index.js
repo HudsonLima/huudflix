@@ -33,7 +33,7 @@ function FormCategory() {
 
     return (    
         <PageDefault>
-          <h1> Add new category: {values.title}</h1>
+          <h1> Create new Category {values.title}</h1>
             
             <form onSubmit={function handleSubmit(info) {
                 info.preventDefault();
@@ -80,12 +80,11 @@ function FormCategory() {
                 />              
 
               <Button>
-                Create new Category
+                Create
               </Button>
 
               {categories.length === 0 && (
                 <div>
-                  {/* Cargando... */}
                   Loading...
                 </div>
               )}
