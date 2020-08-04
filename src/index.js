@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Home from './pages/Home';
-import AddMovie from './pages/register/movie';
-import AddCategory from './pages/register/category';
+import FormVideo from './pages/manage/video';
+import FormCategory from './pages/manage/category';
 import {  BrowserRouter, Switch, Route} from 'react-router-dom';
 import './index.css';
 
@@ -12,8 +12,8 @@ ReactDOM.render(
   <BrowserRouter>
   <Switch>
     <Route path="/" component={Home} exact />
-    <Route path="/register/movie" component={AddMovie} />
-    <Route path="/register/category" component={AddCategory} />
+    <Route path="/manage/video" component={FormVideo} />
+    <Route path="/manage/category" component={FormCategory} />
     <Route component={Error404Page} />
   </Switch>
   </BrowserRouter>,

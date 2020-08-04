@@ -1,28 +1,214 @@
 {
-    "categories": [
-        {
-            "id": 1,
-            "title": "Music",
-            "description": "Great music videos",
-            "color": "#6b5be2"
-        },
-        {
-            "id": 2,
-            "title": "Movies",
-            "description": "",
-            "color": "orange"
-        },
-        {
-            "id": 3,
-            "title": "Series",
-            "description": "",
-            "color": "red"
-        },
-        {
-            "id": 4,
-            "title": "Books",
-            "description": "",
-            "color": "blue"
-        }
-    ]
+  "categories": [
+    {
+      "id": 1,
+      "title": "Music",
+      "description": "",
+      "color": "#6BD1FF",
+      "link_extra": {
+        "text": "",
+        "url": ""
+      }
+    },
+    {
+      "id": 2,
+      "title": "Movies",
+      "description": "",
+      "color": "red",
+      "link_extra": {
+        "text": "",
+        "url": ""
+      }
+    },
+    {
+      "id": 3,
+      "title": "TV Series",
+      "description": "",
+      "color": "orange",
+      "link_extra": {
+        "text": "",
+        "url": ""
+      }
+    },
+    {
+      "id": 4,
+      "title": "Books",
+      "description": "",
+      "color": "#00C86F",
+      "link_extra": {
+        "text": "",
+        "url": ""
+      }
+    }
+  ],
+  "videos": [
+    {
+      "id": 1,
+      "categoryId": 1,
+      "title": "Life in Syntropy",
+      "url": "https://www.youtube.com/watch?v=gSPNRu4ZPvE&"
+    },
+    {
+      "id": 2,
+      "categoryId": 1,
+      "title": "Eric Clapton - Layla",
+      "url": "https://www.youtube.com/watch?v=pKwQlm-wldA"
+    },
+    {
+      "id": 3,
+      "categoryId": 1,
+      "title": "Duran Duran - A Matter Of Feeling",
+      "url": "https://www.youtube.com/watch?v=MjJfqQucQ0I"
+    },
+    {
+      "id": 4,
+      "categoryId": 1,
+      "title": "R.E.M. - Losing My Religion",
+      "url": "https://www.youtube.com/watch?v=xwtdhWltSIg"
+    },
+    {
+      "id": 5,
+      "categoryId": 1,
+      "title": "The Commodores - Easy",
+      "url": "https://www.youtube.com/watch?v=3DSVMDmzCcA"
+    },
+    {
+      "id": 6,
+      "categoryId": 1,
+      "title": "John Mayer - Stop This Train",
+      "url": "https://www.youtube.com/watch?v=mS2o4q7vRFM"
+    },
+    {
+      "id": 7,
+      "categoryId": 1,
+      "title": "Jack Johnson - Banana Pancakes",
+      "url": "https://www.youtube.com/watch?v=tH5Q9-M6t8c"
+    },
+    {
+      "id": 8,
+      "categoryId": 2,
+      "title": "Interestellar",
+      "url": "https://www.youtube.com/watch?v=frD_IiY_A3E"
+    },
+    {
+      "id": 9,
+      "categoryId": 2,
+      "title": "Constantine",
+      "url": "https://www.youtube.com/watch?v=DEa508Xmmio"
+    },
+    {
+      "id": 10,
+      "categoryId": 2,
+      "title": "No Limite do Amanhã",
+      "url": "https://www.youtube.com/watch?v=EA6EWWwDbtY"
+    },
+    {
+      "id": 11,
+      "categoryId": 2,
+      "title": "Yesterday",
+      "url": "https://www.youtube.com/watch?v=6uqvgPm8U4c"
+    },
+    {
+      "id": 12,
+      "categoryId": 2,
+      "title": "Avengers: Infinity War",
+      "url": "https://www.youtube.com/watch?v=6ZfuNTqbHE8"
+    },
+    {
+      "id": 13,
+      "categoryId": 2,
+      "title": "Pulp Fiction",
+      "url": "https://www.youtube.com/watch?v=s7EdQ4FqbhY"
+    },
+    {
+      "id": 14,
+      "categoryId": 3,
+      "title": "Dark",
+      "url": "https://www.youtube.com/watch?v=6EhDKaWLJgg"
+    },
+    {
+      "id": 15,
+      "categoryId": 3,
+      "title": "F.R.I.E.N.D.S",
+      "url": "https://www.youtube.com/watch?v=SHvzX2pl2ec"
+    },
+    {
+      "id": 16,
+      "categoryId": 3,
+      "title": "Chaves",
+      "url": "https://www.youtube.com/watch?v=KGsQJ-MOdcY"
+    },
+    {
+      "id": 17,
+      "categoryId": 3,
+      "title": "O Mecanismo",
+      "url": "https://www.youtube.com/watch?v=80NBF4O-guM"
+    },
+    {
+      "id": 18,
+      "categoryId": 3,
+      "title": "Narcos",
+      "url": "https://www.youtube.com/watch?v=xl8zdCY-abw"
+    },
+    {
+      "id": 19,
+      "categoryId": 1,
+      "title": "a-ha - Take on me",
+      "url": "https://www.youtube.com/watch?v=djV11Xbc914"
+    },
+    {
+      "id": 20,
+      "categoryId": 1,
+      "title": "So far Away",
+      "url": "https://www.youtube.com/watch?v=YIHMPc6ZCuI"
+    },
+    {
+      "id": 21,
+      "categoryId": 4,
+      "title": "Albert Einstein - The World As I See It",
+      "url": "https://www.youtube.com/watch?v=3Y0_aNvH0Wo"
+    },
+    {
+      "id": 22,
+      "categoryId": 4,
+      "title": "Gabo - One Hundred Years of Solitude",
+      "url": "https://www.youtube.com/watch?v=tJ0gG-LLb1k"
+    },
+    {
+      "id": 23,
+      "categoryId": 4,
+      "title": "Stephen Hawking - A Brief History of Time",
+      "url": "https://www.youtube.com/watch?v=JdveRpPyetg"
+    },
+    {
+      "id": 24,
+      "categoryId": 4,
+      "title": "Steve Jobs",
+      "url": "https://www.youtube.com/watch?v=G4jjxOnQcBw"
+    },
+    {
+      "id": 25,
+      "categoryId": 4,
+      "title": "Harper Lee - To Kill a Mockingbird ",
+      "url": "https://www.youtube.com/watch?v=B-xANFGX2MQ"
+    },
+    {
+      "id": 25,
+      "categoryId": 3,
+      "title": "Everybody Hates Chris",
+      "url": "https://www.youtube.com/watch?v=XNGuV0N1FpI"
+    },
+    {
+      "id": 26,
+      "categoryId": 2,
+      "title": "Everybody Hates Chris",
+      "url": "https://www.youtube.com/watch?v=RlfooqeZcdY"
+    },
+    {
+      "id": 27,
+      "categoryId": 4,
+      "title": "O Escaravelho do Diabo",
+      "url": "https://www.youtube.com/watch?v=jvcBfZT5aX4"
+    }
+  ]
 }

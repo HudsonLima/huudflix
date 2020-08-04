@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
 import useForm from '../../../hooks/useForm';
+import categoriesRepository from '../../../repositories/categories';
 
-function AddCategory() {
+function FormCategory() {
 
   const initialValues = {
     title: '',
@@ -36,6 +37,16 @@ function AddCategory() {
             
             <form onSubmit={function handleSubmit(info) {
                 info.preventDefault();
+
+                categoriesRepository.create({
+                  title: values.title,
+                  url: values.url,
+                  color: values.color,
+                })
+                  .then(() => {
+                    console.log('record successfully registered!');
+                  });
+
                 setCategories([
                   ...categories,
                   values
@@ -69,7 +80,7 @@ function AddCategory() {
                 />              
 
               <Button>
-                Add
+                Create new Category
               </Button>
 
               {categories.length === 0 && (
@@ -98,4 +109,4 @@ function AddCategory() {
     )
 }
 
-export default AddCategory;
+export default FormCategory;
