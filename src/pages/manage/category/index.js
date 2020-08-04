@@ -3,63 +3,63 @@ import PageDefault from '../../../components/PageDefault';
 import { Link } from 'react-router-dom';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
+import useForm from '../../../hooks/useForm';
+import categoriesRepository from '../../../repositories/categories';
 
-function AddCategory() {
+function FormCategory() {
 
   const initialValues = {
-    name: '',
+    title: '',
     description: '',
     color: '',
     };
+    
+  const { handleChange, values, clearForm } = useForm(initialValues);
   
   const [categories, setCategories] = useState([]);
-  const [values, setValues] = useState(initialValues);
-
-  function setValue(key, value) {
-    setValues({
-      ...values,
-      [key]: value
-    })
-  };
-
-  function handleChange(parm) {
-    
-    // const { getAttribute, value } = parm.target;
-    setValue(
-      parm.target.getAttribute('name'),
-      parm.target.value
-    );
-  };
-
-  useEffect(() => {
-    console.log('called useEffect');
-    const URL = 'http://localhost:8080/categories';
-    fetch(URL)
-      .then(async (serverResponse) => {
-        const response = await serverResponse.json();
-        setCategories(response);
-      });
+   
+    useEffect(() => {
+      const URL_TOP = window.location.hostname.includes('localhost')
+        ? 'http://localhost:8080/categories'
+        : 'https://huudflix.herokuapp.com/categories';
+      fetch(URL_TOP)
+        .then(async (serverResponse) => {
+          const response = await serverResponse.json();
+          setCategories([
+            ...response,
+          ]);
+        });
     }, []);
 
     return (    
         <PageDefault>
-          <h1> Add new category: {values.name}</h1>
+          <h1> Add new category: {values.title}</h1>
             
             <form onSubmit={function handleSubmit(info) {
                 info.preventDefault();
+
+                categoriesRepository.create({
+                  title: values.title,
+                  url: values.url,
+                  color: values.color,
+                })
+                  .then(() => {
+                    console.log('record successfully registered!');
+                  });
+
                 setCategories([
                   ...categories,
                   values
                 ]);
 
-                setValues(initialValues);
+                clearForm();
               }}>
 
                 <FormField 
                   label="Category Name"
                   type="text"
-                  name="name"                 
-                  value={values.name}
+                  name="title"                 
+                  value={values.title}
                   onChange={handleChange}
                 />
 
@@ -80,15 +80,23 @@ function AddCategory() {
                 />              
 
               <Button>
-                Add
+                Create new Category
               </Button>
+
+              {categories.length === 0 && (
+                <div>
+                  {/* Cargando... */}
+                  Loading...
+                </div>
+              )}
+
             </form> 
 
             <ul>
-                {categories.map((category, indice) => {
+                {categories.map((category) => {
                   return (
-                    <li key={`${category}${indice}`}>
-                      {category.name}
+                    <li key={`${category.title}`}>
+                      {category.title}
                     </li>
                   )
                 })}
@@ -101,4 +109,4 @@ function AddCategory() {
     )
 }
 
-export default AddCategory;
+export default FormCategory;

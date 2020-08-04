@@ -11,8 +11,8 @@ function Menu() {
                 <img className="Logo" src={Logo} alt="HuudFlix Logo"/>
             </Link>
 
-            <Button as={Link} className="ButtonLink" to="/register/movie">
-                New movie
+            <Button as={Link} className="ButtonLink" to="/manage/video">
+                New Video
             </Button>
         </nav>
     );
